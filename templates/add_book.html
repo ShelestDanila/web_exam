@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Добавить книгу</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% include 'book_form.html' %}
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+<a href="{{ url_for('index') }}" class="btn btn-primary mt-2">Назад к списку</a>
+{% endblock %}
